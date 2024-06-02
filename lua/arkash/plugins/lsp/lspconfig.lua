@@ -85,43 +85,23 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["rust_analyzer"] = function()
-        lspconfig["rust_analyzer"].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["gopls"] = function()
-        lspconfig["gopls"].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["tsserver"] = function()
-        lspconfig["tsserver"].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["pyright"] = function()
-        lspconfig["pyright"].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        })
-      end,
+      -- ["lua_ls"] = function()
+      --   -- configure lua server (with special settings)
+      --   lspconfig["lua_ls"].setup({
+      --     capabilities = capabilities,
+      --     settings = {
+      --       Lua = {
+      --         -- make the language server recognize "vim" global
+      --         diagnostics = {
+      --           globals = { "vim" },
+      --         },
+      --         completion = {
+      --           callSnippet = "Replace",
+      --         },
+      --       },
+      --     },
+      --   })
+      -- end,
     })
   end,
 }
