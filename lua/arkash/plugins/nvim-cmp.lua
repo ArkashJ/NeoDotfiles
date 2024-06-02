@@ -39,7 +39,6 @@ return {
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
       }),
-
       -- sources for autocompletion
       -- Order matters a lot
       sources = cmp.config.sources({
