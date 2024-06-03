@@ -32,7 +32,7 @@ return {
         timeout_ms = 200,
       },
     })
-
+    -- in visual mode select a specific block to format by using <leader>mp
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
       conform.format({
         lsp_fallback = true,

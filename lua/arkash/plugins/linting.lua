@@ -13,7 +13,7 @@ return {
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-
+    -- Lint when you enter or modify a buffer or when you leave the insert mode
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,
       callback = function()
